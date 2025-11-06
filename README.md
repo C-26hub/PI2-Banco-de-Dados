@@ -126,7 +126,7 @@ O **MER** final garante consistência, escalabilidade e aderência às regras do
 
 ## 👥 Equipe
 - **Arthur Filipe** – @gmail.com
-- **Filipe Xavier** – @gmail.com   
+- **Filipe Xavier dos Santos** – xfilipe2006.santos@gmail.com   
 - **Maria Cecília de Lima e Silva** – cecilmari33@gmail.com  
 - **Maria Eduarda Pereira Vilarim** – vilarim051@gmail.com
 - **Matheus Alves** – @gmail.com
