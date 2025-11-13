@@ -82,7 +82,12 @@ O **MER** ![MER da Editora](Imagens/modeloConceitual-Ecosy.jpg)
 representa graficamente todas as entidades, atributos e relacionamentos descritos acima.  
 
 Principais relacionamentos:
-
+- *Usuário* cadastra *Beneficiário* (1:n)
+- *Beneficiário* possui *Endereço* (1:1)
+- *Usuário* realiza *Observação* (1:n)
+- *Usuário* registra *Entrega* (1:n)
+- *Beneficiário* recebe *Entrega* (1:n)
+- *Entrega* pertence a *Lote* (n:1)
 
 ---
 
@@ -91,7 +96,7 @@ Principais relacionamentos:
 ```
 📁 /Projeto-Ecosy
 ├── 📄 README.md                  → Documentação geral do projeto
-├── 📁 /images                    → Imagens dos Modelos entidade-relacionamento e relacional
+├── 📁 /Imagens                    → Imagens dos Modelos conceitual e lógico
 │   ├── EDITORA ME FINAL (png).png
 │   └── EDITORA MER VERSÃO DEFINITIVA.jpg
 ├── 📁 /Scripts
@@ -102,7 +107,7 @@ Principais relacionamentos:
 │   ├── 04_updates_deletes.sql     → Atualização de tabelas e exclusão de dados
 │   ├── 05_selects.sql             → Consultas SQL para teste e análise
 │   └── 06_views.sql → (Opcional)  → Criação de visões 
-└── 📁 /modelos                    → Arquivos de Backup para rodar o modelo nos aplicarivos (BRmodelo e MySQL)
+└── 📁 /Modelos                    → Arquivos de Backup para rodar o modelo nos aplicarivos (BRmodelo e MySQL)
     └── Minimundo_Editora.pdf     
 ```
 
