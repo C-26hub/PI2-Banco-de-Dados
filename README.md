@@ -77,29 +77,12 @@ De acordo com os requisitos do projeto, foram desenvolvidos:
 
 ---
 
-## 🧩 O que colocamos além do pedido
-Além das entidades solicitadas inicialmente, foram adicionadas:
-- **Cliente**, para permitir o registro completo de vendas e pedidos;  
-- **Livros_Pedidos**, entidade associativa para representar a relação *n:n* entre *Livros* e *Pedidos* e armazenar a **quantidade** de exemplares solicitados;  
-- Atributos de **localização detalhada** para exemplares;  
-- Relacionamento de **gestão entre Departamento e Funcionário**, permitindo identificar quem gerencia cada setor.
-
----
-
 ## 🧮 MER (Modelo Entidade-Relacionamento)
 O **MER** ![MER da Editora](Imagens/modeloConceitual-Ecosy.jpg) 
 representa graficamente todas as entidades, atributos e relacionamentos descritos acima.  
 
 Principais relacionamentos:
-- *Autor* escreve *Livro* (n:n)  
-- *Livro* pertence a *Área de Conhecimento* (n:1)  
-- *Livro* possui *Palavra-Chave* (n:n)  
-- *Livro* tem *Exemplar* (1:n)  
-- *Pedido e Venda* é registrado por *Funcionário* (n:1)  
-- *Pedido e Venda* é efetuado por *Cliente* (n:1)  
-- *Pedido e Venda* contém *Livros_Pedidos* (n:n)  
-- *Funcionário* pertence a *Departamento* (n:1)  
-- *Departamento* é gerenciado por um *Funcionário* (1:1)
+
 
 ---
 
