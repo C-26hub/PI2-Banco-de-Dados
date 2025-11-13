@@ -1,52 +1,58 @@
 # 📚 Projeto: Banco de Dados do Ecosy
 
 ## 📘 Descrição Geral
-Este projeto tem como objetivo desenvolver um **banco de dados relacional completo** para uma **editora de livros**, abordando todas as etapas do processo editorial — desde o cadastro de autores e obras até o controle de estoque, vendas e pedidos.  
-O sistema busca garantir a **integração das informações**, **facilidade de consulta** e **eficiência operacional** para a gestão da empresa.
+O Ecosy é um sistema desenvolvido para gerenciar e monitorar o processo de distribuição de sementes a beneficiários cadastrados em programas socioambientais. 
+O sistema tem como principal objetivo organizar as etapas de aquisição, armazenamento e entrega de lotes de sementes, assegurando rastreabilidade, controle de estoque e transparência nas operações.
+
+A plataforma permite que **usuários autorizados** (como administradores ou operadores) cadastrem **beneficiários**, **endereços** e **entregas**, além de registrarem **observações** e acompanharem o **status** de cada lote. 
+Por meio desse controle centralizado, o Ecosy busca otimizar a logística de distribuição e promover um uso mais sustentável dos recursos.
 
 ---
 
-## 🏛️ Minimundo – Editora
+## 🏛️ Minimundo – Ecosy
 
-A **Editora Literarte** (nome fictício) é uma empresa dedicada à publicação, distribuição e venda de livros. Seu funcionamento envolve diferentes setores, colaboradores, autores e clientes.  
-O banco de dados proposto visa integrar e automatizar esses processos.
+A **Ecosy** é um sistema informatizado de controle de entregas de sementes para beneficiários de programas ambientais.
 
-### **Livros**
-Cada **livro** é identificado por um **ISBN único** e contém informações como **título**, **autor(es)**, **editora**, **data de publicação**, **gênero**, **número de páginas** e **descrição**.  
-Os livros podem pertencer a uma **ou mais áreas de conhecimento**, estar associados a **palavras-chave** e possuir **diversos exemplares físicos** controlados pelo sistema.
+### **Usuários**
+Os **usuários** são os responsáveis por administrar e operar o sistema.
+Cada usuário é identificado por um **ID único** e possui informações como **nome**, **sobrenome**, **CPF**, **e-mail**, **senha**, **status** e **nível de acesso** (por exemplo, administrador ou operador).
+São eles que realizam o **cadastro de beneficiários**, o **registro de entregas** e o **lançamento de observações** dentro do sistema.
 
 ### **Autores**
 Os **autores** são cadastrados com um **ID único**, contendo **nome**, **biografia**, **nacionalidade**, **data de nascimento** e **obras escritas**.  
 Um autor pode escrever **vários livros**, e cada livro pode ter **mais de um autor**, configurando uma relação **n:n**.
 
-### **Departamentos**
-Os **departamentos** representam as divisões internas da editora, como *Editorial*, *Marketing*, *Financeiro* e *Vendas*.  
-Cada departamento tem um **ID**, **nome**, **descrição das atividades** e é **gerenciado por um funcionário**.  
-Um departamento pode ter **vários funcionários**, mas cada funcionário pertence a **um único departamento**.
+### **Beneficiários**
+Os **beneficiários** são as pessoas que recebem as sementes distribuídas pelo projeto.
+Cada beneficiário é identificado por um **ID** e contém dados como **nome**, **sobrenome**, **CPF**, **telefone**, **associação** (organização à qual pertence) e **status** (ativo ou inativo).
+Os beneficiários são **cadastrados por um usuário** e possuem **endereços associados**, que indicam sua localização para entrega das sementes.
 
-### **Funcionários**
-Os **funcionários** são identificados por seu **CPF**, e armazenam dados como **nome**, **cargo**, **telefone** e **endereço**.  
-São responsáveis por registrar pedidos, atender clientes e realizar as atividades administrativas da editora.
+### **Endereços**
+Cada beneficiário possui um **endereço** registrado no sistema, contendo **rua**, **cidade**, **estado** e **CEP**.
+Essas informações são essenciais para o planejamento das **rotas de entrega** e para a **organização logística** das distribuições realizadas pela Ecosy
 
-### **Exemplares**
-Cada **exemplar físico** de um livro possui um **número de série único**, **status** (como *disponível*, *reservado*, *vendido* ou *danificado*) e **localização física** (endereço, bairro, cidade, UF).  
-Essa entidade permite o controle de estoque detalhado.
+### **Lotes**
+Os **lotes** representam os conjuntos de sementes disponíveis para distribuição.
+Cada lote possui um **ID** e informações como **tipo de semente**, **quantidade em quilogramas**, **data de aquisição**, **origem**, **documento anexo** (comprovante digital) e **status** (por exemplo, disponível, em entrega ou esgotado).
+Os lotes são utilizados nas **entregas realizadas aos beneficiários**.
 
-### **Áreas de Conhecimento**
-Os livros são categorizados em **áreas de conhecimento**, cada uma com um **código** e uma **descrição**, como “Ciências Humanas”, “Tecnologia”, “Saúde”, entre outras.
+### **Entregas**
+As **entregas** registram a distribuição de sementes aos beneficiários.
+Cada entrega possui um **ID**, **status da entrega**, **quantidade entregue**, **data da entrega**, **foto do comprovante** e **data de confirmação**.
+Uma entrega está sempre associada a **um beneficiário** e **um lote**, sendo **registrada por um usuário**.
+Esse controle permite rastrear todas as operações e manter um histórico confiável das ações realizadas.
 
-### **Palavras-chave**
-As **palavras-chave** são cadastradas com um **código** e uma **descrição**.  
-Cada livro pode estar associado a várias palavras-chave, facilitando a indexação e as buscas temáticas.
+### **Observações**
+As **observações** são anotações registradas por usuários para documentar **ocorrências**, **comentários ou informações complementares** sobre o processo de distribuição.
+Cada observação possui um **ID**, **descrição** e **data/hora de registro**, além de estar vinculada a um **usuário** responsável.
+Essa funcionalidade contribui para a transparência e monitoramento contínuo do sistema.
 
-### **Clientes**
-Os **clientes** são as pessoas que realizam pedidos. Cada cliente possui um **ID**, **nome**, **endereço**, **telefone** e **e-mail**.  
-Podem efetuar vários pedidos ao longo do tempo.
-
-### **Pedidos e Vendas**
-Os **pedidos** registram as transações entre clientes e a editora.  
-Cada pedido possui um **ID**, **data da transação**, **status**, **forma de pagamento**, e é **registrado por um funcionário** e **efetuado por um cliente**.  
-Um pedido pode conter **vários livros**, e cada livro pode aparecer em **diversos pedidos**, criando a entidade associativa **Livros_Pedidos**, que também guarda a **quantidade solicitada**.
+## **Relação entre Entidades**
+- Um **usuário** pode **cadastrar vários beneficiários**, mas cada beneficiário é cadastrado por **um único usuário**.
+- Um **usuário** pode **registrar várias observações**.
+- Cada **entrega** está associada a **um beneficiário** e **um lote**.
+- Um **beneficiário** possui **um endereço**.
+- Um **lote pode estar vinculado a **diversas entregas**.
 
 ---
 
