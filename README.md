@@ -61,8 +61,8 @@ Essa funcionalidade contribui para a transparência e monitoramento contínuo do
 De acordo com os requisitos do projeto, foram desenvolvidos:
 
 - Minimundo com descrição detalhada do domínio de negócio.
-- Modelagem Entidade-Relacionamento (MER).
-- Modelagem Relacional (MR).
+- Modelagem Conceitual (Diagrama MER).
+- Modelagem Lógico (Diagrama MR).
 - Documento explicativo com imagens dos diagramas.
 - Scripts SQL organizados e documentados, incluindo:
 - Criação de tabelas e views (DDL).
@@ -72,6 +72,8 @@ De acordo com os requisitos do projeto, foram desenvolvidos:
 - Atualizações e exclusões de dados (mínimo 20 DML).
 - Relatórios/consultas importantes (mínimo 20 SELECTs com JOINs e Subselects).
 - Criação de views para relatórios (mínimo 10).
+- Criação de procedures e funções (mínimo 14 Usando SP/SQL).
+- Criação de triggers (mínimo 12 Usando SP/SQL).
 
 ---
 
