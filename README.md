@@ -52,7 +52,7 @@ Essa funcionalidade contribui para a transparência e monitoramento contínuo do
 - Um **usuário** pode **registrar várias observações**.
 - Cada **entrega** está associada a **um beneficiário** e **um lote**.
 - Um **beneficiário** possui **um endereço**.
-- Um **lote pode estar vinculado a **diversas entregas**.
+- Um **lote** pode estar vinculado a **diversas entregas**.
 
 ---
 
@@ -73,7 +73,7 @@ De acordo com os requisitos do projeto, foram desenvolvidos:
 - Relatórios/consultas importantes (mínimo 20 SELECTs com JOINs e Subselects).
 - Criação de views para relatórios (mínimo 10).
 
---
+---
 
 ## 🧩 O que colocamos além do pedido
 Além das entidades solicitadas inicialmente, foram adicionadas:
