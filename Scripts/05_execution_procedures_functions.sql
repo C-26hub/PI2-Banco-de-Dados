@@ -4,7 +4,7 @@
 
 -- Teste de Procedures
 SELECT '--- Teste de Procedures ---' AS Info;
-CALL SP_InserirNovoUsuario(21, '616.717.818-90', 'Novo', 'Aluno', 'novo.aluno@ads.com', 'Ativo', 'senha123', 'Técnico');
+CALL SP_InserirNovoUsuario(23, '619.718.811-90', 'Mateus', 'Alves', 'Mateus.Alves@ads.com', 'Ativo', 'senha321', 'Técnico');
 CALL SP_AtualizarStatusBeneficiario(3, 'Ativo');
 CALL SP_RegistrarEntrega(21, 'Pendente', 10, NOW(), NOW(), 1, 1);
 CALL SP_BuscarLotesPorStatus('Concluído');
