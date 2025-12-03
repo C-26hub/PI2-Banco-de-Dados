@@ -110,9 +110,19 @@ CREATE PROCEDURE SP_DeletarObservacaoAntiga(
     IN p_dias INT
 )
 BEGIN
+    DECLARE v_old_safe_updates INT;
+
+    -- Guarda configuração atual de safe updates desta sessão
+    SET v_old_safe_updates = @@SQL_SAFE_UPDATES;
+    -- Desliga safe updates só dentro desta procedure
+    SET SQL_SAFE_UPDATES = 0;
+
     DELETE FROM Observacao
     WHERE dataHora < (NOW() - INTERVAL p_dias DAY);
-    
+
+    -- Restaura configuração original de safe updates
+    SET SQL_SAFE_UPDATES = v_old_safe_updates;
+
     SELECT CONCAT('Observações mais antigas que ', p_dias, ' dias deletadas.') AS Mensagem;
 END$$
 
