@@ -31,7 +31,7 @@ CREATE TRIGGER TR_Beneficiarios_AfterInsert_LogCriacao
 AFTER INSERT ON Beneficiarios
 FOR EACH ROW
 BEGIN
-    INSERT INTO Observacao (idObservacao, texto, dataHora, Usuarios_idUsuario)
+    INSERT INTO Observacao (idObservacao, descricao, dataHora, Usuarios_idUsuario)
     VALUES (
         NULL,
         CONCAT('Novo beneficiário cadastrado: ', NEW.nome, ' ', NEW.sobrenome),
@@ -46,7 +46,7 @@ CREATE TRIGGER TR_Beneficiarios_AfterInsert_AddLog
 AFTER INSERT ON Beneficiarios
 FOR EACH ROW
 BEGIN
-    INSERT INTO Observacao (idObservacao, texto, dataHora, Usuarios_idUsuario)
+    INSERT INTO Observacao (idObservacao, descricao, dataHora, Usuarios_idUsuario)
     VALUES (
         NULL,
         CONCAT('Novo beneficiário cadastrado: ', NEW.nome, ' ', NEW.sobrenome),
@@ -78,16 +78,14 @@ BEGIN
     WHERE idLote = NEW.Lote_idLote;
 END$$
 
--- 7. TR_Entrega_AfterUpdate_ConfirmaData – Preenche dataConfirmacao
-DROP TRIGGER IF EXISTS TR_Entrega_AfterUpdate_ConfirmaData$$
-CREATE TRIGGER TR_Entrega_AfterUpdate_ConfirmaData
-AFTER UPDATE ON Entrega
+-- 7. TR_Entrega_BeforeUpdate_ConfirmaData – Preenche dataConfirmacao sem atualizar a própria tabela
+DROP TRIGGER IF EXISTS TR_Entrega_BeforeUpdate_ConfirmaData$$
+CREATE TRIGGER TR_Entrega_BeforeUpdate_ConfirmaData
+BEFORE UPDATE ON Entrega
 FOR EACH ROW
 BEGIN
     IF NEW.status = 'Concluído' AND OLD.status <> 'Concluído' THEN
-        UPDATE Entrega
-        SET dataConfirmacao = NOW()
-        WHERE idEntrega = NEW.idEntrega;
+        SET NEW.dataConfirmacao = NOW();
     END IF;
 END$$
 
@@ -121,7 +119,7 @@ CREATE TRIGGER TR_Observacao_BeforeInsert_ImpedirTextoVazio
 BEFORE INSERT ON Observacao
 FOR EACH ROW
 BEGIN
-    IF TRIM(NEW.texto) = '' THEN
+    IF TRIM(NEW.descricao) = '' THEN
         SIGNAL SQLSTATE '45000'
         SET MESSAGE_TEXT = 'Não é permitido inserir uma observação vazia.';
     END IF;
@@ -143,7 +141,7 @@ AFTER UPDATE ON Usuarios
 FOR EACH ROW
 BEGIN
     IF NEW.status <> OLD.status THEN
-        INSERT INTO Observacao (idObservacao, texto, dataHora, Usuarios_idUsuario)
+        INSERT INTO Observacao (idObservacao, descricao, dataHora, Usuarios_idUsuario)
         VALUES (
             NULL,
             CONCAT('Status do usuário ', NEW.nome, ' alterado para ', NEW.status),
