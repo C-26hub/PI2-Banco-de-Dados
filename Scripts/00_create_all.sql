@@ -85,7 +85,7 @@ CREATE TABLE Endereco (
 -- Tabela: Observacao
 -- ============================
 CREATE TABLE Observacao (
-  idObservacao INT NOT NULL,
+  idObservacao INT NOT NULL AUTO_INCREMENT,
   descricao VARCHAR(250) NOT NULL,
   dataHora DATETIME NOT NULL,
   Usuarios_idUsuario INT NOT NULL,
