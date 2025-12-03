@@ -42,6 +42,7 @@ INSERT INTO Lote VALUES
 (19,'Aveia',160,'2024-09-22','Fazenda S',0x01,'Distribuição'),
 (20,'Centeio',140,'2024-10-05','Fazenda T',0x01,'Concluído');
 
+ALTER TABLE Beneficiarios MODIFY telefone BIGINT;
 INSERT INTO Beneficiarios VALUES
 (1,'Marcos','Pereira','123.111.222-33',81999999999,'Ativo','Associação A',1),
 (2,'Júlia','Dias','555.444.333-22',81988888888,'Ativo','Associação B',2),
